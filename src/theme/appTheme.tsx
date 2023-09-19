@@ -20,18 +20,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
   },
-  btn: {
-    height: 80,
-    width: 80,
-    backgroundColor: '#9b9b9b',
-    borderRadius: 100,
+  row: {
+    flexDirection: 'row',
     justifyContent: 'center',
-  },
-  btnText: {
-    textAlign: 'center',
-    padding: 10,
-    fontSize: 30,
-    color: '#000',
-    fontWeight: 'bold',
+    marginBottom: 18,
+    paddingHorizontal: 10,
   },
 });
