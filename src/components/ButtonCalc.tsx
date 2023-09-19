@@ -5,14 +5,16 @@ interface Props {
   text: string;
   color?: string;
   stretch?: boolean;
+  action: (value: string) => void;
 }
 export const ButtonCalc = ({
   text,
   color = '#2D2D2D',
   stretch = false,
+  action,
 }: Props) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => action(text)}>
       <View
         style={{
           ...styles.btn,

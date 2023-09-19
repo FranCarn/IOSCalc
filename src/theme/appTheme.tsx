@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 60,
     textAlign: 'right',
+    marginBottom: 10,
   },
   valueSmall: {
     color: 'rgba(255,255, 255, 0.5)',
