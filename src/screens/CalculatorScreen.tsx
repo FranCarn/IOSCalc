@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React from 'react';
 import {Text, View} from 'react-native';
 import {styles} from '../theme/appTheme';
 import {ButtonCalc} from '../components/ButtonCalc';
