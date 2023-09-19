@@ -77,17 +77,40 @@ export const CalculatorScreen = () => {
     changeNumberForLastNumber();
     lastOperator.current = Operators.split;
   };
+
   const multiplyButton = () => {
     changeNumberForLastNumber();
     lastOperator.current = Operators.multiply;
   };
+
   const substractButton = () => {
     changeNumberForLastNumber();
     lastOperator.current = Operators.substract;
   };
+
   const additionButton = () => {
     changeNumberForLastNumber();
     lastOperator.current = Operators.addition;
+  };
+
+  const getResult = () => {
+    const num1 = Number(number);
+    const num2 = Number(prevNumber);
+    switch (lastOperator.current) {
+      case Operators.addition:
+        setNumber(`${num1 + num2}`);
+        break;
+      case Operators.substract:
+        setNumber(`${num2 - num1}`);
+        break;
+      case Operators.multiply:
+        setNumber(`${num1 * num2}`);
+        break;
+      case Operators.split:
+        setNumber(`${num2 / num1}`);
+        break;
+    }
+    setPrevNumber('0');
   };
 
   return (
@@ -126,7 +149,7 @@ export const CalculatorScreen = () => {
       <View style={styles.row}>
         <ButtonCalc text="0" stretch action={makeNumber} />
         <ButtonCalc text="." action={makeNumber} />
-        <ButtonCalc text="=" color="#FF9427" action={deleteAllEntries} />
+        <ButtonCalc text="=" color="#FF9427" action={getResult} />
       </View>
     </View>
   );
